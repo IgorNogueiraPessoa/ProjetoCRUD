@@ -1,0 +1,287 @@
+@font-face {
+  font-family:'Candara';
+  src: url(font/candara-light.ttf) format('truetype');
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background: #0c192c;
+  justify-content: left;
+  align-items: center;
+  min-height:100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: rgba(161, 160, 160, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente os itens */
+  align-items: center; 
+  padding-inline: 32px;
+  overflow: hidden;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  flex-wrap: wrap;       
+}
+
+.container::before {
+  content: "";
+  position:absolute;
+  height: 250%;
+  width: 250%;
+  background: conic-gradient(
+      transparent,transparent,transparent, #ff2d75
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+.container::after {
+  content: "";
+  position:absolute;
+  height: 250%;
+  width: 250%;
+  background: conic-gradient(
+      transparent,transparent,transparent,#4fc3dc
+  );
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+ 0% {
+     transform: rotate(0);
+ }
+ 100% {
+     transform: rotate(360deg);
+ }
+}
+.fundo {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  inset: 5px;
+  background-color: #0c1022;
+  z-index: 1;
+  border-radius: 16px;
+}
+.form-container {
+  display:flex;
+  margin-left: 8%;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60vh;
+}
+.form-container .form h2 {
+  font-size: 28px;
+  color: white;
+  text-align: left;
+  font-family: Tahoma, sans-serif;
+  margin-top: 4%;
+}
+
+.form .form-group {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #ff2d75
+}
+
+
+
+.form-group input {
+  width:100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 35px 0 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.form .form-group1 {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: none;
+}
+
+
+
+.form-group1 input {
+  width:100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 35px 0 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-group1 label {
+  position: relative;
+  color:#4fc3dc ;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  font-family: "Candara";
+  font-weight: bold;
+  transition: .3s   
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+.form-group label {
+  position: absolute;
+  color:#4fc3dc ;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  font-family: "Candara";
+  font-weight: bold;
+  transition: .3s   
+}
+
+input[name="btnenviar"], input[name="limpar"], button, input[name="btnalterar"] {
+  text-align: center;
+  color: #4fc3dc;
+  line-height: 50px;
+  text-decoration: none;
+  background: rgba(161, 160, 160, 0.1);
+  font-size: 16px;
+  width: 45%;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  border-radius: 6px;    
+  border: none;
+}
+button a {
+  text-decoration: none; 
+  color: #4fc3dc;  
+  display: block;  
+}
+
+input[name="btnenviar"]:hover, input[name="limpar"]:hover, button:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+.botao {
+  display: flex;
+  justify-content: space-between; 
+  gap: 10px; 
+}
+
+.fundo img {
+  width: 25%;
+  height: 40%; 
+  margin-right:15%;
+  margin-top: 15%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.form button {
+  text-align: center;
+  color: #4fc3dc;
+  line-height: 50px;
+  text-decoration: none;
+  background: rgba(161, 160, 160, 0.1);
+  font-size: 16px;
+  width: 160%; /* Alterado para cobrir todo o width do botão */
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Adicionado para garantir que a largura inclua padding e borda */
+}
+
+@media (width: 1920px) and (height: 1080px) {
+
+  .form-container .form h2 {
+      font-size: 50px;
+      margin-top: 4%;
+  }
+  
+  .form .form-group {
+      position: relative;
+      margin: 30px 0;
+      width: 90%;
+      border-bottom: 2px solid #ff2d75
+  }
+  
+  .form-group input {
+      width:90%;
+      height: 90px;
+      font-size: 26px;
+      padding: 0 35px 0 5px;
+
+  }
+
+  .form-group label { 
+      font-size: 30px;  
+  }
+  
+  
+  input[name="btnalterar"], input[name="limpar"], button {
+      width: 130px;
+  }
+
+  .botao {
+      gap: 10px; 
+  }
+
+  .fundo img {
+      width: 25%;
+      height: 40%; 
+      margin-right:13%;
+      margin-top: 17%;
+  }
+
+  .form .form-group1 {
+      position: relative;
+      margin: 30px 0;
+      width: 130%;
+      border-bottom: none;
+  }
+  
+  .form-group1 input {
+      width:90%;
+      height: 90px;
+      font-size: 26px;
+      padding: 0 35px 0 5px;
+
+  }
+
+  .form-group1 label { 
+      font-size: 30px;  
+  }
+
+}

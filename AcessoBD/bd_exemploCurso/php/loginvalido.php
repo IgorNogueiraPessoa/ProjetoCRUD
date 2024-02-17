@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name = "cliente" method = "POST" action = "">
+        <fieldset id = "a">
+            <legend><b> Acesso negado: usuário ou senha incorretos </b></legend>
+            <button><a href="http://localhost/AcessoBD/bd_exemploCurso/php/entrar.php">Voltar</a></button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

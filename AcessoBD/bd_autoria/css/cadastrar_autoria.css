@@ -1,0 +1,134 @@
+@font-face {
+    font-family:'Rockwell Extra Bold';
+    src: url(font/rockwell-extra-bold.ttf) format('truetype');
+    font-style: normal;
+  }
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+   background-color: rgb(224, 123, 255);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+img {
+    width: 40%; 
+    margin-right: 6%;
+    margin-top: 140px;
+}
+
+  .form-container {
+    width: 40%;
+    height: 95%;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 140px;
+    border-radius: 5px;
+    
+    display: flex; 
+    flex-direction: column; 
+    justify-content: left; 
+    padding: 20px;
+    font-family: "Rockwell Extra Bold";
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    
+}
+
+.form-group label {
+    margin-bottom: 1px;
+}
+
+.form-group input {
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 50%;
+    outline: none;
+}
+
+input[name="btnenviar"], input[name="limpar"], button
+{
+    background-color: white;
+    font-size: 16px;
+    width:20%;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+    font-family: "Rockwell Extra Bold";
+    border-color: black;
+    cursor: pointer;
+    background-color: rgb(212, 208, 208);
+    width: 130px;
+    height: 50px;
+    margin-left: -7%;
+    
+}
+
+.botao {
+    display: flex;
+    margin: 40px 35px;
+    margin-bottom: 5%;
+    justify-content: space-between; 
+}
+
+p
+{
+font-size: x-large;
+}
+
+@media (width: 1920px) and (height: 1080px) {
+   
+    body
+    {
+        overflow: hidden;
+    }    
+
+    input[name="btnenviar"], input[name="limpar"], button
+    {
+    
+    font-size:25px;
+    width: 170px;
+    height: 80px;
+    margin-left: -7%; 
+   }
+
+   .form-container
+   {
+    font-size:25px;
+   }
+
+   .botao {
+    margin: 40px 50px;
+    margin-bottom: 2%;
+    justify-content: space-between; 
+}
+
+  p
+  {
+    font-size:45px;
+  }
+
+  img
+  {
+    margin-right: 110px;
+    margin-top: 170px;
+  }
+
+  
+  .form-container {
+    margin-top: 120px;
+}
+
+
+  }
